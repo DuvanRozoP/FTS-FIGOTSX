@@ -1,0 +1,16 @@
+{
+  "quiet": true,
+  "verbose": "none",
+  "restartable": "App se reiniciará al guardar cambios",
+  "watch": ["./src"],
+  "ext": ["tsx", "go"],
+  "exec": "go run .",
+  "events": {
+    "crash": "echo ❌ La aplicación ha dejado de funcionar.",
+    "exit": "echo ✅ Gracias Por usar EXTS.",
+    "start": "echo 🚀 Iniciando la aplicación! ✨",
+    "quit": "echo ⛔️ La aplicación ha sido detenida.",
+    "restart": "echo 🤔 Reiniciando la aplicación! ⏳",
+    "config:update": "echo 🔄 Project update."
+  }
+}
