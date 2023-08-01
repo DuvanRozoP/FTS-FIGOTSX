@@ -1,0 +1,5 @@
+{
+  "directoryApi": "src/api",
+  "directoryPages": "src/pages",
+  "outputFile": "modules/lib"
+}

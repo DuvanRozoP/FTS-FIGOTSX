@@ -3,14 +3,14 @@
   "verbose": "none",
   "restartable": "App se reiniciará al guardar cambios",
   "watch": ["./src"],
-  "ext": ["tsx", "go"],
-  "exec": "go run .",
+  "ext": "go tsx ts",
+  "exec": "clear ; npm run dev:client && clear ; echo ⏹️ Cargando Servidor. ; go run main.go",
   "events": {
     "crash": "echo ❌ La aplicación ha dejado de funcionar.",
     "exit": "echo ✅ Gracias Por usar EXTS.",
     "start": "echo 🚀 Iniciando la aplicación! ✨",
-    "quit": "echo ⛔️ La aplicación ha sido detenida.",
-    "restart": "echo 🤔 Reiniciando la aplicación! ⏳",
+    "quit": "echo ⛔️ La aplicación ha sido detenida. && pkill main",
+    "restart": "echo 🤔 Reiniciando la aplicación! ⏳ && pkill main && sleep 5",
     "config:update": "echo 🔄 Project update."
   }
 }
