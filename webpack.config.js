@@ -29,7 +29,7 @@ module.exports = {
   },
   plugins: [
     new scriptWebpackPlugin({
-      scripts: ['go run modules/scripts/scripts.go'],
+      scripts: ['./modules/scripts/scripts'],
       catchMessage: 'Error execute Scripts ⛔',
       doneMessage: 'Complete execute Scripts 🟢',
       doneCompilationMessage: 'Bulding Complete 🟢',
