@@ -1,3 +1,6 @@
 node_modules/
 go-fiber.exe
 package-lock.json
+dist/
+src/cache/
+.env
