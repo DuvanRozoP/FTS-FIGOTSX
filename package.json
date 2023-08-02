@@ -1,6 +1,6 @@
 {
   "name": "go-fiber",
-  "version": "1.0.0",
+  "version": "2.1.7",
   "description": "",
   "scripts": {
     "dev:client": "webpack --config webpack.config.js",
