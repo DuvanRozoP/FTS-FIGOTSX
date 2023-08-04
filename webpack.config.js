@@ -29,10 +29,26 @@ module.exports = {
   },
   plugins: [
     new scriptWebpackPlugin({
-      scripts: ['./modules/scripts/scripts'],
+      scripts: [
+        './modules/scripts/scripts',
+        `npx tailwindcss -i src/index.css -o ${
+          isDevelopment
+            ? path.resolve(
+                __dirname,
+                'public/index.bundle.css'
+              )
+            : path.resolve(
+                __dirname,
+                'dist/static/index.bundle.css'
+              )
+        }`,
+        isDevelopment
+          ? ''
+          : 'go build -o dist/server main.go',
+      ],
       catchMessage: 'Error execute Scripts ⛔',
       doneMessage: 'Complete execute Scripts 🟢',
-      doneCompilationMessage: 'Bulding Complete 🟢',
+      doneCompilationMessage: 'All Scripts Complete 🟢',
     }),
   ],
 };
